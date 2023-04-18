@@ -1,7 +1,6 @@
-%% 1 Hodgkin-Huxley Model
-
 %%
-% 2
+% graphing the voltage-dependent functions a, B, n, tau for gating variable n
+% using the steady state activation rate, opening/closing rate, and time constant function equations from HH
 
 V = -120:0.1:0;
 a_n = zeros(1, length(V));
@@ -38,7 +37,8 @@ xlabel("V (mV)")
 ylabel("tau (ms)")
 
 %%
-% 3, 4
+% graphing the voltage-dependent functions n, m, h and voltage-dependent time constants tau_n, tau_m, tau_h
+% using the rate function equations from HH
 
 V = -120:0.1:20;
 
@@ -94,7 +94,8 @@ ylabel("tau (ms)")
 legend({'n', 'm', 'h'})
 
 %%
-% 5
+% full simulation of Hodgkin-Huxley model using standard parameters (Dayan and Abbott)
+% simulating a short injection current
 
 c_m = 0.01; %nF/mm^2
 A = 0.1; %mm^2
@@ -216,7 +217,7 @@ xlabel("Time (ms)")
 ylim([0,1])
 
 %%
-% 6
+% full simulation of HH model using standard parameters but blocking sodium channels
 
 V = zeros(1, length(time));
 V(1) = -65; %(mV)
@@ -323,7 +324,7 @@ xlabel("Time (ms)")
 ylim([0,1])
 
 %%
-% 6 pt 2
+% full simulation of HH model using standard parameters but blocking sodium channels
 
 V = zeros(1, length(time));
 V(1) = -65; %(mV)
@@ -430,7 +431,7 @@ xlabel("Time (ms)")
 ylim([0,1])
 
 %%
-% 6 pt 3
+% full simulation of HH model using standard parameters but with persistent sodium channels
 
 V = zeros(1, length(time));
 V(1) = -65; %(mV)
